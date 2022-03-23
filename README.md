@@ -21,7 +21,20 @@ https://gitbitex.com:8080/trade/BTC-USDT
 ### Server
 * git clone https://github.com/gitbitex/gitbitex-spot.git
 * Create database and make sure **BINLOG[ROW format]** enabled
+```
+/etc/mysql/mysql.conf.d/mysqld.cnf
+[mysqld]
+server-id=1      
+log-bin = mysql-bin 
+```
+
 * Execute ddl.sql
+```
+/etc/mysql/mysql.conf.d/mysqld.cnf
+[mysqld]
+sql-mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+```
+
 * Modify conf.json
 * Run go build
 * Run ./gitbitex-spot
