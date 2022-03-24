@@ -36,8 +36,13 @@ sql-mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AU
 ```
 
 * Modify conf.json
+```
+cp conf_example.json conf.json
+```
+
 * Run go build
 * Run ./gitbitex-spot
+
 ### Web
 * git clone https://github.com/gitbitex/gitbitex-web.git
 * Run `npm install`
