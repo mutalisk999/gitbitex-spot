@@ -28,11 +28,6 @@ import (
 func main() {
 	gbeConfig := conf.GetConfig()
 
-	// seems useless
-	//go func() {
-	//	log.Info(http.ListenAndServe("localhost:6060", nil))
-	//}()
-
 	go models.NewBinLogStream().Start()
 
 	matching.StartEngine()
